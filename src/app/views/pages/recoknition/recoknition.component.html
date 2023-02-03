@@ -1,0 +1,38 @@
+<div class="block-main">
+  <div class="cam" >
+    <app-video-player
+      [width]="700"
+      [height]="500"
+      [stream]="currentStream">
+    </app-video-player>
+  </div>
+
+  <div class="">
+    <div class="zone-body">
+      <div class="block">
+        <div><b>Estado de ánimo</b></div>
+        <div class="block-expression">
+          <div >
+            <span>  </span><span class="value-number" *ngIf="!NextLiveDatection">{{neutral ? 'Mire a la camara y haga una cara neutral': ''}}</span>
+            <span *ngIf="NextLiveDatection">{{liveDetectionRandom()}}</span>
+            <span >  </span><span class="value-number"  *ngIf="NextLiveDatection"> {{valorRandom?.name== 'happy' ? 'Ahora haga una sonrisa ': 'Ahora abra la boca en forma de sorprensa'}} </span>
+            <img *ngIf="NextLiveDatection" style="border-radius: 20px; cursor: pointer; margin: 0 auto" width="200px" [src]="valorRandom?.name== 'happy' ? '../assets/imgs/deteccion-de-rostro.png': '../assets/imgs/sorpresa.png'" alt="">
+            <img *ngIf="!NextLiveDatection && neutral" style="border-radius: 20px; cursor: pointer; margin: 0 auto" width="200px" src="../assets/imgs/neutral1.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="block">
+        <div><b></b></div>
+        <div class="canvas-preview"></div>
+      </div> -->
+    </div>
+    <!-- <div class="zone-btn">
+      <ul class="list-btn">
+        <li *ngFor="let btn of [1,1,1]">
+           <i class="uil uil-emoji"></i>
+        </li>
+      </ul>
+    </div> -->
+  </div>
+
+</div>
