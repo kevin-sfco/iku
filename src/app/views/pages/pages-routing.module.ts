@@ -11,34 +11,7 @@ import {RekognitionGuard} from '../../Guards/rekognition.guard';
 import {FinalizacionProcesoComponent} from './finalizacion-proceso/finalizacion-proceso.component'
 
 const routes: Routes = [
-  {
-    path: '404',
-    component: Page404Component,
-    data: {
-      title: 'Page 404'
-    }
-  },
-  {
-    path: '500',
-    component: Page500Component,
-    data: {
-      title: 'Page 500'
-    }
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      title: 'Login Page'
-    }
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
-    }
-  },
+  
   {
     path: 'document',
     canActivate: [],
@@ -62,7 +35,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'pages/document',
+    redirectTo: 'document',
     pathMatch: 'full',
   },
 ];

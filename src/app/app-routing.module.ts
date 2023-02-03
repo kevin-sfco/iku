@@ -12,10 +12,13 @@ import { CommonModule } from '@angular/common';
 import {AuthGuard} from '../app/Guards/auth.guard'
 
 const routes: Routes = [
+  
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full'
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'Login Page'
+    }
   },
   {
     path: '',
@@ -25,7 +28,7 @@ const routes: Routes = [
       title: ''
     },
     children: [
-      {
+      /* {
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
@@ -69,7 +72,7 @@ const routes: Routes = [
         path: 'widgets',
         loadChildren: () =>
           import('./views/widgets/widgets.module').then((m) => m.WidgetsModule)
-      },
+      }, */
       {
         path: '',
         loadChildren: () =>
@@ -91,13 +94,7 @@ const routes: Routes = [
       title: 'Page 500'
     }
   },
-  {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      title: 'Login Page'
-    }
-  },
+  
   {
     path: 'register',
     component: RegisterComponent,
@@ -105,22 +102,29 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {path: '**', redirectTo: 'dashboard'}
+  {path: '**', redirectTo: 'dashboard'},
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
-  /* imports: [
-    RouterModule.forRoot(routes
-      // relativeLinkResolution: 'legacy'
-    )
-  ], */
   imports: [
+    RouterModule.forRoot(routes,{
+      useHash: false
+    }
+      
+    )
+  ],
+  /* imports: [
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
       useHash: false
     })
-  ],
+  ], */
   exports: [RouterModule]
 })
 export class AppRoutingModule {

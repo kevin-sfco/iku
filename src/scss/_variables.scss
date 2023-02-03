@@ -17,7 +17,7 @@
 // $gray-700:  #768192;
 // $gray-800:  #636f83;
 // $gray-900:  #4f5d73;
-// $black:     #000015;
+$black:     #000015;
 
 // fusv-disable
 // $grays: (
@@ -1531,8 +1531,8 @@
 // );
 // $sidebar-padding-y:                        0;
 // $sidebar-padding-x:                        0;
-// $sidebar-color:                            $high-emphasis-light;
-// $sidebar-bg:                               $gray-base;
+$sidebar-color:                            rgb(219, 27, 27);
+$sidebar-bg:                               #7a7a7a;
 // $sidebar-border-width:                     0;
 // $sidebar-border-color:                     transparent;
 // $sidebar-transition:                       margin-left .15s, margin-right .15s, box-shadow .075s, transform .15s, width .15s, z-index 0s ease .15s;
