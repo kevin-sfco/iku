@@ -1,37 +1,192 @@
-.responsive {
-    width: 65%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
+.title {
+  color: #092532 !important;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.text {
+  color: #092532;
+  font-size: 1em;
+}
+.footerText {
+  color: #092532;
+  font-size: 0.8em;
+}
+.hv-left {
+  padding: 9.9%;
+  height: 100vh;
+}
+.label {
+  color: #092532;
+  font-size: 0.8em;
+  text-align: center;
+}
+.logo-purple {
+  color: #5170f7;
+  font-weight: 700;
+  letter-spacing: 1;
+  font-size: 50px;
+}
+.text-purple {
+  color: #8394fc;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1;
+}
+.inputBorder {
+  border: 1px rgba(231, 225, 225, 0.714) solid;
+  border-radius: 10px;
+}
+.inputBorderDentro {
+  border: none;
+  width: 75%;
+  border-left: 1px rgba(196, 196, 196, 0.714) solid;
+  margin-left: 12px;
+}
+.inputwidth {
+  height: 45px;
+  background-color: transparent;
+}
+.inputwidth:focus {
+  outline: none;
+}
+.bg-gray {
+  background-color: #93959727;
+  margin-right: -3%;
+}
+.ops {
+  margin-top: -30px;
+}
+.btnleft {
+  margin-left: 1%;
+}
+.btnleft:hover{
+    background-color: #cdcdcd83;
 }
 
-.btn-large{
-    background-color: #A5B5FC ;
-    color: black;
-    //height: 137px;
-    width: 546px;
+.backfooter {
+  background-image: url("../../../../assets/images/grupo2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.btn-medium{
-    background-color: #A5B5FC ;
-    color: black;
-    height: 60px;
-    width: 285px;
-}
-.btn-small{
-    background-color: #A5B5FC ;
-    color: black;
-    height: 50px;
-    width: 208px;
-}
-.btn-forgot{  
-    color: black;
-    //height: 137px;
-    width: 546px;
+.imgright{
+    width: 100%;//750px;
+    margin-left: -21%;
+    height: 100%;
+    height: 500px;
+    margin-bottom: -9%;
 }
 
-.input{
-    height: 137px;
-    width: 546px;
+@media (max-width: 600px) {
+  .bg-gray {
+    background-color: #93959727;
+    margin-right: 0%;
+  }
+  .ops {
+    margin-top: 0px;
+  }
+  .btnleft {
+    margin-left: 3%;
+  }
+  .divider {
+    border-radius: 0px !important;
+    border: none;
+  }
+  .right-query{
+    text-align: center;
+    margin-top: 18px;
+  }
+  .imgright{
+    display: block !important;
+    height: 200px;
+    width: 450px;
+    margin-left: 25px;
+    margin-bottom: 5%;
+  }
+
+}
+
+@media (max-width: 900px) {
+.right-query{
+    text-align: center;
+    margin-top: 18px;
+    }
+  .bg-gray {
+    background-color: #93959727;
+    margin-right: 0%;
+  }
+  .ops {
+    margin-top: 0px;
+  }
+  .btnleft {
+    margin-left: 3%;
+  }
+  .divider {
+    border-radius: 0px !important;
+    border: none;
+  }
+  .imgright{
+    display: block !important;
+    height: 100%;
+    height: 400px;
+    width: 100%;
+    margin-left: -30px;
+    margin-bottom: 5%;
+  }
+}
+
+.btn-acceder {
+  background-color: #8394fc;
+  width: 102%;
+  color: white;
+  opacity: 0.7;
+  margin-top: 9px;
+  height: 45px;
+}
+.btn-acceder:hover{
+    opacity: 1;
+}
+a{
+    text-decoration: none;
+}
+.btn-password{
+    float:right;
+}
+.btn-password:hover{
+    background-color: #cdcdcd83;
+}
+.a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.btn-signup:hover {
+    opacity: 1;
+    background-color: #cdcdcd5f;
+}
+.transparent {
+  background-color: transparent;
+}
+.btn-signup {
+  //background-color: #fff;
+  width: 102%;
+  opacity: 0.9;
+  margin-top: 9px;
+  height: 45px;
+  border: 0.2px #09253248 solid;
+}
+.btn-right {
+  background-color: #fff;
+  opacity: 0.9;
+  margin-top: 5px;
+  height: 45px;
+  border: 0.2px #09253248 solid;
+}
+.background-left {
+  background-color: #bac3e92a;
+}
+.divider {
+  border-radius: 0% 10% 40% 54% / 30% 0% 100% 00%;
+  background-color: #9eaadb20;
+}
+* {
+  font-family: "Outfit", sans-serif;
 }
