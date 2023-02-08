@@ -5,6 +5,7 @@ import { navItems } from './_nav';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html',
+  styleUrls: ['./default.componet.scss']
 })
 export class DefaultLayoutComponent {
 

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+
 import { VideoPlayerService } from '../services/video-player.service';
+import { Observable } from 'rxjs-compat';
 
 
 @Injectable({

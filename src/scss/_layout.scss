@@ -1,7 +1,8 @@
 .wrapper {
-  width: 100%;
+  width: 100%;  
   @include ltr-rtl("padding-left", var(--cui-sidebar-occupy-start, 0));
   @include ltr-rtl("padding-right", var(--cui-sidebar-occupy-end, 0));
   will-change: auto;
+  background-color: rgba(172, 172, 172, 0.714)!important; 
   @include transition(padding .15s);
 }

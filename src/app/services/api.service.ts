@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { map } from 'rxjs/operators';
+import { map } from 'rxjs-compat/operators/map';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  post(path: string, data: any, headers:any): any {
+  post(path: string, data: any, headers?:any): any {
     /* const headers = new HttpHeaders(
       {
         "type": "FRONT",

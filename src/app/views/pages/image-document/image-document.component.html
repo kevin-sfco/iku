@@ -1,146 +1,88 @@
-<div class="block-main justify-content-center" style="background-color:rgba(217, 213, 245, 0.384)">
-  <div class="img row justify-content-center" >
-    <div class=" col-12">
 
-        <div class="col-12 title text-center mt-5 font2" style="color: black;">
-          {{imageFront ? 'Suba la imagen frontal de la cédula': 'Suba la imagen posterior de la cédula'}}
+<div class="container mt-2 bg-white">
+  <div class="row align-items-start">
+    <div class="col">
 
-        </div><br><br>
-        <div class="col-12 text-center" >
-
-          <span class="text-justify" style="color: black;">Ten presente que este documento debe estar en formato JPG y debe ser de máximo 15MB.</span><br>
-        </div><br><br>
-
-
-        <div class="col-12 rounded text-center">
-          <img (click)="fileUpload.click()" style="border-radius: 20px; cursor: pointer; margin: 0 auto" width="200px" [src]="imageFront ? '../assets/imgs/cedula-frente-pag.png': '../assets/imgs/cedula-atras-pag.png'" alt="">
-        </div><br><br><br>
-        <div class="row justify-content-center" *ngIf="imageFront">
-          <div class="col-md-6">
-              <div class="text-center">
-                  <label>Digite el número de su cédula</label>
-                  <input type="number" style="background-color:rgba(217, 213, 245, 0.384)" maxlength="12" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                  class="form-control" name= "inicio" [(ngModel)]="numeroCedula" required>
-
-              </div>
-          </div>
-          <!-- <button type="button" (click)="init()">Start</button>
-          <div id="webcam-container"></div>
-          <div id="label-container"></div> -->
-
-      </div><br><br>
-
-      <div>Teachable Machine Image Model - p5.js and ml5.js</div>
-
-      <script type="text/javascript">
-        // Classifier Variable
-        let classifier;
-        // Model URL
-        let imageModelURL = '../assets/model-json/';
-
-        // Video
-        let video;
-        let flippedVideo;
-        // To store the classification
-        let label = "";
-
-        // Load the model first
-        function preload() {
-          classifier = ml5.imageClassifier(imageModelURL + 'model.json');
-        }
-
-        function setup() {
-          createCanvas(320, 260);
-          // Create the video
-          video = createCapture(VIDEO);
-          video.size(320, 240);
-          video.hide();
-
-          flippedVideo = ml5.flipImage(video);
-          // Start classifying
-          classifyVideo();
-        }
-
-        function draw() {
-          background(0);
-          // Draw the video
-          image(flippedVideo, 0, 0);
-
-          // Draw the label
-          fill(255);
-          textSize(16);
-          textAlign(CENTER);
-          text(label, width / 2, height - 4);
-        }
-
-        // Get a prediction for the current video frame
-        function classifyVideo() {
-          flippedVideo = ml5.flipImage(video)
-          classifier.classify(flippedVideo, gotResult);
-          flippedVideo.remove();
-
-        }
-
-        // When we get a result
-        function gotResult(error, results) {
-          // If there is an error
-          if (error) {
-            console.error(error);
-            return;
-          }
-          // The results are in an array ordered by confidence.
-          // console.log(results[0]);
-          label = results[0].label;
-          // Classifiy again!
-          classifyVideo();
-        }
-      </script>
-
-        <!-- <div class="col-12 rounded text-center">
-          <input type="number" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-        </div> -->
-        <input
-          id="file"
-          type="file"
-          accept="image/*"
-          multiple
-          (change)="incomingfile($event)"
-          class="file-input"
-          #fileUpload
-        />
-        <div class="file-upload text-center" style="color: black;">
-
-          {{file?.name || "Aún no ha subido un archivo."}}
-
-            <button color="primary" class="upload-btn" id="boton" style="background-color: #726add15"
-              (click)="fileUpload.click()">
-              <svg cIcon name="cil-file" size="xl" title="Numbered List Icon"></svg>
-
-                <i style="color: #726addbf" class="cil3d"></i>
-
-            </button>
-        </div><br>
-        <div class="col-12 text-center" *ngIf="preview">
-          <img style="border-radius: 20px"  width="250px" [src]="preview" alt="">
-        </div><br>
-        <div class="row mt-3 text-center">
-          <div class="{{imageFront ? 'col-12' : 'col-6'}} text-center" *ngIf="!imageFront || documentsOk">
-            <button type="submit"  class="btn btn-md " (click)="atras()" id="boton" style="color: #726adde6;"><i class="fa fa-hand-o-left" style="color: #726adde6;">
-              </i> Volver</button>
-          </div>
-          <div class="{{imageFront ? 'col-12' : 'col-6'}} text-center" *ngIf="!documentsOk">
-            <button type="submit" [disabled]="!file" class="btn btn-md" id="boton" (click)="imageFront ? subirFrontal() : SubirImgT()" style="color: #726add;" ><i class="fa fa-file-image-o" style="color: #726add;">
-            </i> {{imageFront ? 'Subir imagen frontal': 'Subir imagen posterior'}}</button>
-          </div>
-
-          <div class="col-6 text-center" *ngIf="documentsOk">
-            <button type="submit" [disabled]="!file" class="btn btn-md" id="boton" (click)="SubirDocumentos()" style="color: #726add;"> Ir a reconocimiento facial</button>
-          </div>
-
+      <div class="card text-white" style="width: 18rem; background-color: #092532;">
+        <div class="card-body ">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
         </div>
+      </div>
 
     </div>
+    <div class="col">
+      
+      <div class="card text-white" style="width: 18rem; background-color:#092532;">
+        <div class="card-body ">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
 
+    </div>
+    <div class="col">
+      <div class="card text-white" style="width: 18rem; background-color:#092532;">
+        <div class="card-body ">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-12 table-responsive">
+      <table class="table  table-border">
+        <thead>
+          <tr>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Nacimiento</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Completado</th>
+            <th scope="col">Validaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@test</td>
+            <td>@fabio</td>
+            <td>@mdo</td>
+            <td>@asdas</td>
+            <td>@kevin</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@test</td>
+            <td>@fabio</td>
+            <td>@mdo</td>
+            <td>@asdas</td>
+            <td>@kevin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+ 
+  
+  
 </div>
 

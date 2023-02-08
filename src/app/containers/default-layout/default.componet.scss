@@ -1,0 +1,37 @@
+.inputBorderDentro {
+  border-style: none;
+  width: 75%;
+  border-left: 1px rgba(196, 196, 196, 0.714) solid;
+  margin-left: 12px;
+}
+.inputwidth {
+  height: 70px;
+  background-color: transparent;
+}
+.inputwidth:focus {
+  outline: none;
+}
+.label {
+    color: #092532;
+    font-size: 0.8em;
+    text-align: center;
+}
+/* .label2{
+    color: #092532;
+    font-size: 0.8em;
+    text-align: center;
+    width: 130px;
+}
+
+.inputwidth2{
+    height: 30%;
+    background-color: transparent;
+}
+.inputwidth2:focus {
+    outline: none;
+} */
+
+.inputBorder {
+    border: 1px rgba(172, 172, 172, 0.714) solid;
+    border-radius: 10px;
+}

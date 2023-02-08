@@ -1,19 +1,39 @@
 <!--<c-header class="mb-4 d-print-none" position="sticky">-->
 <ng-container>
-  <c-container [fluid]="true">
-    <button
-      toggle="visible"
-      cHeaderToggler
-      [cSidebarToggle]="sidebarId"
-      class="ps-1"
-    >
-      <svg cIcon
-        name="cilMenu"
-        size="lg"
-      ></svg>
-    </button>
+  
+  <div class="row m-0">
+
+    <div class="col-sm-1 col-lg-1 col-md-1">
+      <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1">
+        <svg cIcon name="cilMenu" width="10px" size="sm"></svg>
+      </button>
+    </div>
+    
+    <div class="col-sm-5 col-lg-5 col-md-5">
+      <div class="input-group">
+        <span class="input-group-text border-0 bg-transparent" id="basic-addon1">@</span>
+        <input type="text" class="form-control border-0" placeholder="Buscar..." aria-describedby="basic-addon1">
+      </div>
+    </div>
+    
+    <div class="col-sm-3 col-lg-3 col-md-3">
+      <div class="input-group">
+        <input type="text" class="form-control " placeholder="Abril/2022 - Mayo/2022" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+    
+    <div class="col-sm-3 col-lg-3 col-md-3">
+      <div class="input-group ps-4">
+        <button class="btn btn-primary">@ Nuevo link de Validación</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <c-container [fluid]="true">
+    
     <c-header-nav class="d-none d-lg-flex me-auto">
-      <!-- <c-nav-item>
+      <c-nav-item>
         <a cNavLink routerLink="/dashboard" routerLinkActive="active">
           Dashboard
         </a>
@@ -25,7 +45,7 @@
         <a cNavLink routerLink="/settings" routerLinkActive="active">
           Settings
         </a>
-      </c-nav-item> -->
+      </c-nav-item>
     </c-header-nav>
 
     <c-header-nav class="d-none d-lg-flex">
@@ -45,20 +65,20 @@
         </a>
       </c-nav-item>
     </c-header-nav>
-    <c-header-nav class="ms-3">
+    <c-header-nav class="ms-0">
       <ng-container *ngTemplateOutlet="userDropdown"></ng-container>
     </c-header-nav>
+  </c-container> -->
 
-  </c-container>
-  <c-header-divider></c-header-divider>
+  <!-- <c-header-divider></c-header-divider>
   <c-container [fluid]="true">
     <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
-  </c-container>
+  </c-container> -->
 </ng-container>
 <!--</c-header>-->
 
 <ng-template #userDropdown>
-  <c-dropdown alignment="end" variant="nav-item">
+  <!-- <c-dropdown alignment="end" variant="nav-item">
     <button
       cButton
       color=""
@@ -160,6 +180,6 @@
       </li>
       <li></li>
     </ul>
-  </c-dropdown>
-</ng-template>
+  </c-dropdown> -->
 
+</ng-template>

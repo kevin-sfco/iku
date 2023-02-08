@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { Page404Component } from './page404/page404.component';
 import { Page500Component } from './page500/page500.component';
-import { ButtonGroupModule, ButtonModule, CardModule, FormModule, GridModule } from '@coreui/angular';
+import { ButtonGroupModule, ButtonModule, CardModule, FooterModule, FormModule, GridModule } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ImageDocumentComponent} from './image-document/image-document.component';
@@ -31,6 +31,7 @@ import { RecoknitionComponent } from './recoknition/recoknition.component';
     IconModule,
     ButtonGroupModule,
     FormsModule,
+    FooterModule,
     ReactiveFormsModule,
   ]
 })

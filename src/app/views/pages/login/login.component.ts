@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators, ReactiveFormsModule  } from '@angul
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ApiService } from '../../../services/api.service';
+import { loadingFireToast } from "../../../../assets/js/toast.js";
 
 //import * as toastFire from '../../../../assets/js/toast';
 
@@ -25,10 +26,11 @@ export class LoginComponent {
   }
 
   async login(){
-    
+    const loading: any = loadingFireToast(
+      'Validando credenciales, por favor espere...'
+    );
     //console.log(this.loginForm.value);
-    
-    await this.apiService.post('login', this.loginForm.value, '').subscribe(
+    await this.apiService.post('login', this.loginForm.value).subscribe(
       async (res: any) => {
         console.log(res);
         
@@ -36,7 +38,8 @@ export class LoginComponent {
         else {
           this.token = res.data
           localStorage.setItem('token', `${this.token}`)
-          this.router.navigate(['dashboard'])
+          loading.close();
+          //this.router.navigate(['document'])
         }
       },
       (error: any) => {
@@ -48,7 +51,7 @@ export class LoginComponent {
 
   public createLoginForm() {
     this.loginForm = new FormGroup({
-      username: new FormControl('', Validators.compose([Validators.required])),
+      email: new FormControl('', Validators.compose([Validators.required])),
       password: new FormControl('', Validators.compose([Validators.required])),
     });
   }
@@ -57,12 +60,12 @@ export class LoginComponent {
     Swal.fire({
       icon: "error",
       title: "Error",
-      text: res.message?.toUpperCase(),
-      timer: 6000,
-    }).then(() => {
+      text: "Error en el login",
+      //timer: 6000,
+    })/* .then(() => {
       if (redirect)
-        window.location.href = window.location.href = "/home/dashboard";
-    });
+        window.location.href = window.location.href = "/document";
+    }); */
   }
 
   warningfireToast(title?: any, msg?: any) {

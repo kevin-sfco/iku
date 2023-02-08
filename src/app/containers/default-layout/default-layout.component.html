@@ -1,51 +1,123 @@
 <!--sidebar-->
-<c-sidebar
-  #sidebar="cSidebar"
-  class="d-print-none sidebar sidebar-fixed"
-  id="sidebar"
-  visible
->
-  <c-sidebar-brand
-    [brandFull]="{
-      src: 'assets/img/brand/coreui-angular.svg',
-      width: 200,
-      height: 46,
-      alt: 'CoreUI Logo'
-    }"
-    [brandNarrow]="{
-      src: 'assets/img/brand/coreui-signet-white.svg',
+<c-sidebar #sidebar="cSidebar" class="d-print-none sidebar sidebar-fixed rounded" id="sidebar" visible>
+  <div class="d-flex bd-highlight">
+    <c-sidebar-brand style="background-color: #d1d1d127;" class="flex-grow-0 me-auto bd-highlight" [brandFull]="{
+      src: 'assets/imgs/icono.png',
+      width: 150 ,
+      alt: ''
+    }" [brandNarrow]="{
+      src: 'assets/imgs/Recurso 11 (1).svg',
       width: 46,
       height: 46,
-      alt: 'CoreUI Logo'
-    }"
-    routerLink="/"
-  >
-  </c-sidebar-brand>
-    <perfect-scrollbar [config]="perfectScrollbarConfig">
-  <!--  [perfectScrollbar]="perfectScrollbarConfig"-->
-  <c-sidebar-nav
+      alt: ''
+    }" routerLink="/">
+
+    </c-sidebar-brand>
+    <div class="p-2 me-3 d-sm-none d-md-block flex-shrink-1 mt-3 bd-highlight">
+      <p class="fs-6 fw-lighter">Terminos de servicio</p>
+    </div>
+    <div class="p-2 mt-3 me-3  d-sm-none d-md-block flex-shrink-1 bd-highlight">
+      <p class="fs-6 fw-lighter">Privacidad y datos personales</p>
+    </div>
+
+
+    <!--  [perfectScrollbar]="perfectScrollbarConfig"-->
+  </div>
+
+  <div class="row mt-5 ms-2">
+    <div class="col-5">
+      <h2>RAPPI SAS</h2>
+    </div>
+    <div class="col-7 align-self-center">
+      <div class="input-group">
+        <span class="input-group-text bg-transparent border border-end-0 border-dark"
+          id="basic-addon1"><strong>Desconexión</strong> </span>
+        <input type="text" class="form-control me-5 bg-transparent text-muted border border-start-0 border-dark"
+          placeholder="Test" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 ms-2">
+    <div class="col-12">
+      <div class="col-lg-11 col-md-12 col-sm-11 inputBorder">
+        <label for="staticEmail" class="col-sm-2  col-form-label label"><strong>Razon social</strong></label>
+        <input type="text" class="inputwidth inputBorderDentro">
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 ms-2">
+    <div class="col-12">
+      <div class="col-lg-11 col-md-12 col-sm-11 inputBorder">
+        <label for="staticEmail" class="col-sm-2  col-form-label label"><strong>Dirección de Residencia</strong></label>
+        <input type="text" class="inputwidth inputBorderDentro">
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 ms-2">
+    <div class="col-12">
+      <div class="col-lg-11 col-md-11 col-sm-11 inputBorder">
+        <label for="staticEmail" class="col-sm-2 pe-3 text-md-center col-form-label label"><strong>Mail</strong></label>
+        <input type="text" class="inputwidth inputBorderDentro">
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 ms-2">
+    <div class="col-12">
+      <div class="col-lg-11 col-md-12 col-sm-11 inputBorder">
+        <label for="staticEmail" class="col-sm-2  col-form-label label"><strong>Contraseña</strong></label>
+        <input type="text" class="inputwidth inputBorderDentro">
+      </div>
+    </div>
+  </div>
+
+  
+    <h6 class="ms-4 mt-4 text-muted">Documentacion</h6>
+    <div class="row mt-3 ms-2">
+      <div class="col-12">
+        <div class="col-lg-11 col-md-11 col-sm-11 inputBorder">
+          <label for="staticEmail" class="col-sm-2 text-md-center col-form-label label"><strong>Camara de
+              Comercio</strong></label>
+          <input type="text" class="inputwidth inputBorderDentro">
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 ms-2">
+      <div class="col-12">
+        <div class="col-lg-11 col-md-11 col-sm-11 inputBorder">
+          <label for="staticEmail" class="col-sm-2 pe-3 label"><strong>RUT
+            </strong></label>
+          <input type="text" class="inputwidth inputBorderDentro">
+        </div>
+      </div>
+    </div>
+ 
+
+
+  <perfect-scrollbar [config]="perfectScrollbarConfig">
+    <!-- <c-sidebar-nav
     [navItems]="navItems"
     dropdownMode="close"
   >
-  </c-sidebar-nav>
-    </perfect-scrollbar>
-  <c-sidebar-toggler
+  </c-sidebar-nav> -->
+  </perfect-scrollbar>
+  <!--  <c-sidebar-toggler
     *ngIf="!sidebar.narrow"
     toggle="unfoldable"
     cSidebarToggle="sidebar"
-  ></c-sidebar-toggler>
+  ></c-sidebar-toggler> -->
 </c-sidebar>
 
 <!--main-->
-<div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
+<div class="wrapper d-flex flex-column min-vh-100 dark:bg-transparent">
   <!--app-header-->
-  <app-default-header class="mb-4 d-print-none header header-sticky" position="sticky" sidebarId="sidebar"></app-default-header>
+  <app-default-header class="d-inline header header-sticky" position="sticky"
+    sidebarId="sidebar"></app-default-header>
   <!--app-body-->
-  <div class="body flex-grow-1 px-3">
+  <div class="body bg-white flex-grow-1 px-1">
     <c-container breakpoint="lg" class="h-auto">
       <router-outlet></router-outlet>
     </c-container>
   </div>
   <!--app footer-->
-  <app-default-footer></app-default-footer>
+  <!--  <app-default-footer></app-default-footer> -->
 </div>
