@@ -1,5 +1,5 @@
 <!--sidebar-->
-<c-sidebar #sidebar="cSidebar" class="d-print-none sidebar sidebar-fixed rounded" id="sidebar" visible>
+<c-sidebar #sidebar="cSidebar" class="d-print-none sidebar sidebar-fixed rounded " id="sidebar" visible>
   <div class="d-flex bd-highlight">
     <c-sidebar-brand style="background-color: #d1d1d127;" class="flex-grow-0 me-auto bd-highlight" [brandFull]="{
       src: 'assets/imgs/icono.png',
@@ -91,7 +91,7 @@
       </div>
     </div>
  
-
+  
 
   <perfect-scrollbar [config]="perfectScrollbarConfig">
     <!-- <c-sidebar-nav
@@ -110,7 +110,7 @@
 <!--main-->
 <div class="wrapper d-flex flex-column min-vh-100 dark:bg-transparent">
   <!--app-header-->
-  <app-default-header class="d-inline header header-sticky" position="sticky"
+  <app-default-header class="d-inline  d-print-none header header-sticky" position="sticky"
     sidebarId="sidebar"></app-default-header>
   <!--app-body-->
   <div class="body bg-white flex-grow-1 px-1">

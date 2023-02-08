@@ -9,6 +9,7 @@ import { RecoknitionComponent } from './recoknition/recoknition.component';
 import {DocumentOkGuard} from '../../Guards/document-ok.guard';
 import {RekognitionGuard} from '../../Guards/rekognition.guard';
 import {FinalizacionProcesoComponent} from './finalizacion-proceso/finalizacion-proceso.component'
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes: Routes = [
   
@@ -34,8 +35,12 @@ const routes: Routes = [
     component: FinalizacionProcesoComponent,
   },
   {
+    path: 'home',
+    component: DashboardComponent,
+  },
+  {
     path: '**',
-    redirectTo: 'document',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
 ];

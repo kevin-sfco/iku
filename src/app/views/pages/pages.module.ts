@@ -5,12 +5,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { Page404Component } from './page404/page404.component';
 import { Page500Component } from './page500/page500.component';
-import { ButtonGroupModule, ButtonModule, CardModule, FooterModule, FormModule, GridModule } from '@coreui/angular';
+import { AvatarModule, ButtonGroupModule, ButtonModule, CardModule, FooterModule, FormModule, GridModule, NavModule, ProgressModule, TableModule, TabsModule } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ImageDocumentComponent} from './image-document/image-document.component';
 import {VideoPlayerComponent} from './video-player/video-player.component'
 import { RecoknitionComponent } from './recoknition/recoknition.component';
+import { ChartjsModule } from '@coreui/angular-chartjs';
+import { WidgetsModule } from '../widgets/widgets.module';
+import {DashboardComponent} from '../../views/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { RecoknitionComponent } from './recoknition/recoknition.component';
     ImageDocumentComponent,
     RecoknitionComponent,
     VideoPlayerComponent,
+    DashboardComponent
 ],
   imports: [
     CommonModule,
@@ -33,6 +37,22 @@ import { RecoknitionComponent } from './recoknition/recoknition.component';
     FormsModule,
     FooterModule,
     ReactiveFormsModule,
+    CardModule,
+    NavModule,
+    IconModule,
+    TabsModule,
+    CommonModule,
+    GridModule,
+    ProgressModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    FormModule,
+    ButtonModule,
+    ButtonGroupModule,
+    ChartjsModule,
+    AvatarModule,
+    TableModule,
+    WidgetsModule
   ]
 })
 export class PagesModule {

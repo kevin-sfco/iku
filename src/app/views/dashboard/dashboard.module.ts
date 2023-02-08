@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard.component';
 import { WidgetsModule } from '../widgets/widgets.module';
 
 @NgModule({
+  
   imports: [
     DashboardRoutingModule,
     CardModule,
