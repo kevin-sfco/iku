@@ -29,7 +29,6 @@ export class LoginComponent {
     const loading: any = loadingFireToast(
       'Validando credenciales, por favor espere...'
     );
-    //console.log(this.loginForm.value);
     await this.apiService.post('login', this.loginForm.value).subscribe(
       async (res: any) => {
         console.log(res);
@@ -39,7 +38,9 @@ export class LoginComponent {
           this.token = res.data
           localStorage.setItem('token', `${this.token}`)
           loading.close();
-          //this.router.navigate(['document'])
+          this.router.navigate(['home'])
+          let object = { "email": "", "password" : ""}
+          this.loginForm.setValue(object )
         }
       },
       (error: any) => {

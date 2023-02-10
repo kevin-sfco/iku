@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { navItems } from './_nav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,5 +16,10 @@ export class DefaultLayoutComponent {
     suppressScrollX: true,
   };
 
-  constructor() {}
+  constructor(private router: Router,) {}
+
+  logOut(){
+    localStorage.removeItem('token');
+    this.router.navigate(['login'])
+  }
 }

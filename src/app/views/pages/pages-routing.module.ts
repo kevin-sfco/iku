@@ -12,13 +12,16 @@ import {FinalizacionProcesoComponent} from './finalizacion-proceso/finalizacion-
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes: Routes = [
-  
+  {
+    path: 'home',
+    component: DashboardComponent,
+  },
   {
     path: 'document',
     canActivate: [],
     component: ImageDocumentComponent,
     data: {
-      title: 'Image'
+      title: 'document'
     }
   },
   {
@@ -33,10 +36,6 @@ const routes: Routes = [
     path: 'finalizacion',
     canActivate: [RekognitionGuard],
     component: FinalizacionProcesoComponent,
-  },
-  {
-    path: 'home',
-    component: DashboardComponent,
   },
   {
     path: '**',

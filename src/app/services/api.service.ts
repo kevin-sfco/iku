@@ -19,15 +19,15 @@ export class ApiService {
         "documentType": "CC"
     }
     ); */
-    return this.http.post<any>(`${environment.URL}${path}`,data, headers).pipe(map(d => d));
+    return this.http.post<any>(`${path}`,data, headers).pipe(map(d => d));
   }
 
   get(path: string): any {
-    return this.http.get<any>(`${environment.URL}${path}`).pipe(map(d => d));
+    return this.http.get<any>(`${path}`).pipe(map(d => d));
   }
 
   delete(path: string): any {
-    return this.http.delete<any>(`${environment.URL}${path}`).pipe(map(d => d));
+    return this.http.delete<any>(`${path}`).pipe(map(d => d));
   }
 
   put(path: string, data: any, headers:any): any {

@@ -21,9 +21,30 @@ const routes: Routes = [
     }
   },
   {
+    path: 'register',
+    component: RegisterComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
+  {
+    path: '404',
+    component: Page404Component,
+    data: {
+      title: 'Page 404'
+    }
+  },
+  {
+    path: '500',
+    component: Page500Component,
+    data: {
+      title: 'Page 500'
+    }
+  },
+  {
     path: '',
     component: DefaultLayoutComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     data: {
       title: ''
     },
@@ -74,35 +95,13 @@ const routes: Routes = [
           import('./views/widgets/widgets.module').then((m) => m.WidgetsModule)
       }, */
       {
-        path: '',
+        path: '',  
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
     ]
   },
-  {
-    path: '404',
-    component: Page404Component,
-    data: {
-      title: 'Page 404'
-    }
-  },
-  {
-    path: '500',
-    component: Page500Component,
-    data: {
-      title: 'Page 500'
-    }
-  },
-  
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
-    }
-  },
-  {path: '**', redirectTo: 'dashboard'},
+  {path: '**', redirectTo: 'login'},
   {
     path: '',
     redirectTo: 'login',
