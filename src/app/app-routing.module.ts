@@ -101,10 +101,10 @@ const routes: Routes = [
       },
     ]
   },
-  {path: '**', redirectTo: 'login'},
+  {path: '**', redirectTo: 'home'},
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
 ];

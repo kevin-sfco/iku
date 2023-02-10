@@ -19,7 +19,12 @@ export class LoginComponent {
   token: any;
   constructor(private router: Router,
     private apiService: ApiService,
-    private sanitizer: DomSanitizer,) { }
+    private sanitizer: DomSanitizer,) { 
+      const user= localStorage.getItem('token');
+      console.log(user);
+      
+      if(user) this.router.navigate(['/home']);
+    }
 
   ngOnInit(): void {
     this.createLoginForm();

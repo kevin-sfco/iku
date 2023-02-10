@@ -1,0 +1,9 @@
+{
+    "login": {
+      "target": "https://api-staging-iku.fabioarias.co/",
+      "secure": false,
+      "pathRewrite": {
+        "^/": ""
+      }
+    }
+}
