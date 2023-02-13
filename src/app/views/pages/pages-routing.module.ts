@@ -5,12 +5,12 @@ import { RecoknitionComponent } from './recoknition/recoknition.component';
 import {DocumentOkGuard} from '../../Guards/document-ok.guard';
 import {RekognitionGuard} from '../../Guards/rekognition.guard';
 import {FinalizacionProcesoComponent} from './finalizacion-proceso/finalizacion-proceso.component'
-import { DashboardComponent } from '../dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: DashboardComponent,
+    component: HomeComponent,
   },
   {
     path: 'document',

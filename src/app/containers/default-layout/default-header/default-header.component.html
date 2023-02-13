@@ -25,10 +25,12 @@
     
     <div class="col-sm-3 col-lg-3 col-md-3">
       <div class="input-group ps-4">
-        <button class="btn btn-primary">@ Nuevo link de Validación</button>
+        <button (click)="(openModal(link))" class="btn btn-primary">@ Nuevo link de Validación</button>
       </div>
     </div>
   </div>
+
+
 
   <!-- <c-container [fluid]="true">
     
@@ -182,4 +184,40 @@
     </ul>
   </c-dropdown> -->
 
+</ng-template>
+
+
+
+<ng-template #link let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title text-uppercase text-black"> <strong> Link de validacion </strong> </h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+    <p class="text-black"> <strong>comparte esta direccion</strong></p>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group input-group-lg mb-3">
+          <span class="input-group-text text-white border-0" id="basic-addon1">icono</span>
+          <input class="form-control border-0 text-center" rows="2" cols="2" placeholder="link" aria-label="With textarea" readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 d-grid gap-2  mx-auto">
+        <button (click)="copyHeroName()" class="btn btn-light btn-lg"> Copiar</button>
+        
+      </div>
+      <div class="col-6  d-grid gap-2 mx-auto">
+        <button class="btn btn-light btn-lg"> Compartir</button>
+      </div>
+    </div>
+
+
+		
+	</div>
+	<!-- <div class="modal-footer">
+		<button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+	</div> -->
 </ng-template>

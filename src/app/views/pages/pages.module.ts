@@ -13,7 +13,7 @@ import {VideoPlayerComponent} from './video-player/video-player.component'
 import { RecoknitionComponent } from './recoknition/recoknition.component';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 import { WidgetsModule } from '../widgets/widgets.module';
-import {DashboardComponent} from '../../views/dashboard/dashboard.component'
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import {DashboardComponent} from '../../views/dashboard/dashboard.component'
     ImageDocumentComponent,
     RecoknitionComponent,
     VideoPlayerComponent,
-    DashboardComponent
+    HomeComponent
 ],
   imports: [
     CommonModule,

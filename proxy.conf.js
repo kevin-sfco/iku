@@ -1,4 +1,4 @@
-var defaultTarget = 'https://api-staging-iku.fabioarias.co/';
+var defaultTarget = 'https://api-staging.iku.services/';
 module.exports = [
 {
    context: ['/api/*'],
